@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница с фоном</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://umbphotos.ag/images/375b18fa3ffcc616179b8cf6ed4732c6.webp');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .bot-link {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>⬇️⬇️⬇️</h1>
+        <button onclick="getBot()">Получить Бот</button>
+        <div class="bot-link" id="botLink">
+            <p>Ваш актуальный бот:</p>
+            <a href="#" id="botUrl" target="_blank">Перейти к боту</a>
+        </div>
+    </div>
+
+    <script>
+        const bots = [
+            { name: "🤖caif coin bot🤖", url: "https://t.me/ceva3_bot" },
+            { name: "🤖caif coin bot🤖", url: "https://t.me/dcwe3f_bot" },
+            { name: "🤖caif coin bot🤖", url: "https://t.me/aefq3f_bot" },
+            { name: "🤖caif coin bot🤖", url: "https://t.me/wdwef23_bot" },
+            { name: "🤖caif coin bot🤖", url: "https://t.me/ecweew_bot" },
+            { name: "🤖caif coin bot🤖", url: "https://t.me/svsvwdws_bot" },
+            { name: "🤖caif coin bot🤖", url: "https://t.me/efvwc4_bot" },
+            { name: "🤖caif coin bot🤖", url: "https://t.me/rebece4c_bot" },
+            { name: "🤖caif coin bot🤖", url: "https://t.me/rebegvwv_bot" },
+            { name: "🤖caif coin bot🤖", url: "https://t.me/vrbaervq_bot" },
+            { name: "🤖caif coin bot🤖", url: "https://t.me/rbwrnwgBot" },
+            { name: "🤖caif coin bot🤖", url: "https://t.me/g44h24vbvBot" },
+            { name: "🤖caif coin bot🤖", url: "https://t.me/eg5b54ghgBot" },
+            { name: "🤖caif coin bot🤖", url: "https://t.me/fq3fqw3fq3frg34Bot" },
+            { name: "🤖caif coin bot🤖", url: "https://t.me/g4wt2cfBot" }
+        ];
+
+        function getBot() {
+            const bot = bots[Math.floor(Math.random() * bots.length)];
+            const botLink = document.getElementById('botLink');
+            const botUrl = document.getElementById('botUrl');
+
+            botUrl.href = bot.url;
+            botUrl.textContent = bot.name;
+            botLink.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
+
+
+
+
